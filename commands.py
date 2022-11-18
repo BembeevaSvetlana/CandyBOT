@@ -74,8 +74,8 @@ async def enemy_turn(player):
             enemy_take = total_count
         else:
             enemy_take = (total_count - 1) % number
-            total = total_count - enemy_take
-            await bot.send_message(player.id, f'Бот взял {enemy_take} конфет, 'f'и на столе осталось {total}')
+        total = total_count - enemy_take
+        await bot.send_message(player.id, f'Бот взял {enemy_take} конфет, 'f'и на столе осталось {total}')
         if model.check_win(total):
             await bot.send_message(player.id, f'{player.first_name} ты проиграл,'f'тебя дёрнула железяка')
             return
