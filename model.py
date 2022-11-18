@@ -1,8 +1,9 @@
 
 players = 0
-total_candies = 150
-max_take = 28
+total_candies = 0
+max_take = 0
 player_take = 0
+level = 0
 
 
 def get_player() -> int:
@@ -22,13 +23,22 @@ def set_total_candies(new_value: int):
     global total_candies
     total_candies = new_value
 
-def get_max_take():
+def get_max_take() -> int:
     global max_take
     return max_take
 
 def set_max_take(new_value: int):
     global max_take
     max_take = new_value
+    
+def get_level() -> int:
+    global level
+    return level
+
+def set_level(new_value: int):
+    global level
+    level = new_value   
+    
 
 def get_player_take():
     global player_take
